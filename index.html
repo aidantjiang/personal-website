@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>aidan jiang \\ home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shotcut icon" href="assets/logo.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="content-desktop">
+      <div class="navbar">
+        <nav class="navMenu">
+          <a href="./">Home</a>
+          <a href="./sub-pages/code.html">Code</a>
+          <a href="./sub-pages/photos.html">Photos</a>
+          <a href="./sub-pages/contact.html">Contact me</a>
+          <div class="dot"></div>
+        </nav>
+      </div>
+      <div id="content">
+        <div class="water"></div>
+        <p></p>
+        <p class="tester">\\AIDAN T JIANG</p>
+        <p class="subtext">enjoy the visit!</p>
+      </div>
+
+      <!-- LOADER ANIMATION, KEEP ON BOTTOM OF PAGE! -->
+      <div class="loader-wrapper">
+          <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+
+      <script src="index.js"></script>
+      <script> 
+        $(".loader-wrapper").ready(() => {
+          console.log("starting");
+          $(".loader-wrapper").delay(Math.floor(Math.random() * 1500) + 1000).fadeOut(800, () => {
+            $(".loader").removeClass("loader");
+            $(".loader-inner").removeClass("loader-inner");
+            console.log("done");
+          });
+        })
+      </script>
+    </div>
+    <div id="content-mobile">
+      <div class="water">hi</div>
+    </div>
+  </body>
+</html>

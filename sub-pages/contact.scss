@@ -1,0 +1,88 @@
+$cycle-time: 30s;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Tiro Devanagari Sanskrit', serif;
+    background-image: linear-gradient(#dfeae2, #8dc3a7);
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    background-color: #3498db;
+    overflow: hidden;
+    animation: colors $cycle-time infinite linear;
+}
+
+#asters {
+    position: relative;
+    margin: auto;
+    width: 100px;
+    height: 200%;
+    animation: rotate $cycle-time infinite linear;
+}
+
+#stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    & .star {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        background-color: white;
+        animation: starscolors $cycle-time infinite linear;
+    }
+}
+
+.sun {
+    position: absolute;
+    top: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+    box-shadow: 0px 0px 21px 1px rgba(241,196,15,1);
+}
+
+.moon {
+    position: absolute;
+    bottom: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-right: 20px solid #ecf0f1;
+    transform: rotate(30deg);
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to   {transform: rotate(-359deg);}
+}
+
+@keyframes colors {
+    0%   {background-color: #3498db;}
+    20%  {background-color: #3498db;}
+    30%  {background-color: #2c3e50;}
+    70%  {background-color: #2c3e50;}
+    80%  {background-color: #3498db;}
+    100% {background-color: #3498db;}
+}
+
+@keyframes starscolors {
+    0%   {background-color: #3498db;}
+    20%  {background-color: #3498db;}
+    30%  {background-color: #ffffff;}
+    70%  {background-color: #ffffff;}
+    80%  {background-color: #3498db;}
+    100% {background-color: #3498db;}
+}
