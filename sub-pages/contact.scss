@@ -1,20 +1,22 @@
 $cycle-time: 30s;
+$offwhite: #FEF5DF;
+$darkgreen: #133a1b;
+$lightgreen: #8dc3a7;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-  
-body {
-    font-family: 'Tiro Devanagari Sanskrit', serif;
-    background-image: linear-gradient(#dfeae2, #8dc3a7);
+    font-family: 'Roboto', sans-serif;
 }
 
 #container {
+    z-index: 100;
+    display: absolute;
+    top: 100;
     width: 100%;
     height: 100vh;
-    background-color: #3498db;
+    background-color: #76b4de;
     overflow: hidden;
     animation: colors $cycle-time infinite linear;
 }
@@ -28,6 +30,7 @@ body {
 }
 
 #stars {
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
@@ -86,3 +89,154 @@ body {
     80%  {background-color: #3498db;}
     100% {background-color: #3498db;}
 }
+
+//end of background
+
+//form
+//author: AlexKP
+//link: https://codepen.io/AlexKP/pen/xJjYwZ
+
+$shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+
+.form-container {
+    z-index: 101;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input, button, textarea {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-image:none;
+    background-color: #dadad3;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 5px;
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    min-height: 50px;
+    resize: vertical;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.feedback {
+    &-card {
+        border: 1px solid black;
+        max-width: 980px;
+        background-color: #fff;
+        margin: 0 auto;
+        box-shadow: $shadow;
+    }
+    &-header {
+        text-align: center;
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        border-bottom: 1px solid black;
+    }
+    &-body {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        
+        &__message {
+            margin-top: 10px;            
+        }
+        
+        button {
+            margin-top: 10px;
+            align-self: flex-end;
+        }
+    }
+}
+
+//end of form
+
+//loader
+
+.loader-wrapper {
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #fff;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(-180deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(-180deg);
+    }
+
+    75% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 100%;
+    }
+
+    50% {
+        height: 0%;
+    }
+
+    75% {
+        height: 100%;
+    }   
+
+    100% {
+        height: 0%;
+    }
+}
+
+//end of loader

@@ -10,10 +10,18 @@
     <link rel="shortcut icon" href="../assets/logo.ico">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="contact.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
   </head>
   <body>
+    <div class="form-container">
+      <div class="feedback-card">
+        <div class="feedback-header">CONTACT ME!</div>
+        <form class="feedback-body">
+          <input type="email" class="feedback-body__email" placeholder="Email"></input>
+          <textarea type="text" class="feedback-body__message" placeholder="Message"></textarea>
+          <button class="feedback-body__submit">SEND</button>
+        </form>
+      </div>
+    </div>
     <!-- background -->
     <div id='container'>
       <div id="stars"></div>
@@ -23,6 +31,22 @@
       </div>
     </div>
     <!-- end background -->
-    
+
+    <!-- LOADER ANIMATION, KEEP ON BOTTOM OF PAGE! -->
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <div class="clock-loader"></div>
+
+    <script> 
+      $(".loader-wrapper").ready(() => {
+        console.log("starting");
+        $(".loader-wrapper").delay(Math.floor(Math.random() * 1500) + 1000).fadeOut(800, () => {
+          $(".loader").removeClass("loader");
+          $(".loader-inner").removeClass("loader-inner");
+          console.log("done removing classes");
+        });
+      })
+    </script>
   </body>
 </html>
