@@ -3,7 +3,7 @@ $(document).ready(function() {
     var res = '',
         width = parseInt($(window).width()),
         height = parseInt($(window).height());
-  
+    var sRes = '';
     for (var i = 0;i < 100;i++) {
       res += '<div class="star" ' +
           'style="top: ' + Math.random() * height +

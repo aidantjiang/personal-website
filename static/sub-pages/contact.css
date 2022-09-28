@@ -46,6 +46,7 @@
 }
 
 .sun {
+  z-index: 2;
   position: absolute;
   top: 20px;
   width: 100px;
@@ -160,6 +161,58 @@
   }
   100% {
     background-color: #3498db;
+  }
+}
+@-webkit-keyframes shooting {
+  0% {
+    opacity: 0;
+    transform: rotateZ(-30deg) translateX(0) scaleX(0);
+  }
+  25% {
+    opacity: 1;
+    transform: rotateZ(-30deg) transalteX(-200%) scaleX(1);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateZ(-30deg) translateX(-400%) scaleX(2);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateZ(-30deg) translateX(-400%) scaleX(2);
+  }
+}
+@keyframes shooting {
+  0% {
+    opacity: 0;
+    transform: rotateZ(-30deg) translateX(0) scaleX(0);
+  }
+  25% {
+    opacity: 1;
+    transform: rotateZ(-30deg) transalteX(-200%) scaleX(1);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateZ(-30deg) translateX(-400%) scaleX(2);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateZ(-30deg) translateX(-400%) scaleX(2);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 .form-container {
@@ -318,4 +371,67 @@ button {
   100% {
     height: 0%;
   }
+}
+.navbar {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-overflow: clip;
+  background: linear-gradient(colors 0%, transparent 100%);
+}
+
+.navMenu {
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.navMenu a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: lowercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 100px;
+  transition: all 0.2s ease-in-out;
+}
+.navMenu a :hover {
+  color: #FEF5DF;
+}
+.navMenu a:nth-child(1):hover ~ .dot {
+  transform: translateX(25px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+.navMenu a:nth-child(2):hover ~ .dot {
+  transform: translateX(120px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+.navMenu a:nth-child(3):hover ~ .dot {
+  transform: translateX(240px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+.navMenu a:nth-child(4):hover ~ .dot {
+  transform: translateX(340px);
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #FEF5DF;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.2s ease-in-out;
 }/*# sourceMappingURL=contact.css.map */
