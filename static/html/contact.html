@@ -20,19 +20,50 @@
         <div class="dot"></div>
       </nav>
     </div>
-    <div class="form-container">
+    <div class="form-container form" id="form">
       <div class="feedback-card">
-        <div class="feedback-header">CONTACT ME!</div>
+        <div class="feedback-header" id="form-header-0">CONTACT ME!</div>
         <form class="feedback-body">
           <input type="text" class="feedback-body__email" id="contactmethod" placeholder="Email or Handle"></input>
           <textarea type="text" class="feedback-body__message" id="message" placeholder="Message"></textarea>
-          <button class="feedback-body__submit submit">SEND</button>
+          <button class="feedback-body__submit" id="submit">SEND</button>
           <!-- <input type="submit" class="submit" value="Send Message"> -->
         </form>
       </div>
     </div>
+
+    <div class="form-container form">
+      <div class="feedback-card" id="popup-failure">
+        <div class="feedback-header" id="form-header-1">ERROR!</div>
+        <div class="feedback-body">
+          <div class="gFlex-row">
+            <img class="emoji" src="../assets/frowny.png">
+            <div class="gFlex-column">
+              <div class="feedback-body__plaintext">Something went wrong</div>
+            </div>
+          </div>
+          <button class="feedback-body__submit close failure">// OK</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-container form">
+      <div class="feedback-card" id="popup-success">
+        <div class="feedback-header " id="form-header-2">EMAIL SENT!</div>
+        <div class="feedback-body">
+          <div class="gFlex-row">
+            <img class="emoji" src="../assets/smiley.png">
+            <div class="gFlex-column">
+              <div class="feedback-body__plaintext">Your message is on its way!</div>
+            </div>
+          </div>
+          <button class="feedback-body__submit close success">// OK</button>
+        </div>
+      </div>
+    </div>
+
     <!-- background -->
-    <div id='container'>
+    <div id='background-container'>
       <div id="stars"></div>
       <div id="asters">
         <div class='sun'></div>
@@ -45,7 +76,6 @@
     <div class="loader-wrapper">
       <span class="loader"><span class="loader-inner"></span></span>
     </div>
-    <div class="clock-loader"></div>
 
     <script> 
       $(".loader-wrapper").ready(() => {

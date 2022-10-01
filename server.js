@@ -30,7 +30,7 @@ app.post('/', (req, res) => {
     })
 
     const mailOptions = {
-        from: req.body.contactmethod,
+        from: `tag/email blank ${req.body.contactmethod}`,
         to: 'aidantjiang@gmail.com',
         subject: `Message from ${req.body.contactmethod}`,
         text: req.body.message,

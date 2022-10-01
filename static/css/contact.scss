@@ -3,6 +3,8 @@ $offwhite: #FEF5DF;
 $darkgreen: #133a1b;
 $lightgreen: #8dc3a7;
 
+//general
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +12,33 @@ $lightgreen: #8dc3a7;
     font-family: 'Roboto', sans-serif;
 }
 
-#container {
+.gFlex {
+    &-column {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        justify-content: center;
+    }
+
+    &-row {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+}
+
+.emoji {
+    width: 30px;
+    height: 30px;
+}
+
+//background
+
+#background-container {
     z-index: 100;
     display: absolute;
     top: 100;
@@ -39,6 +67,7 @@ $lightgreen: #8dc3a7;
     overflow: hidden;
     // animation: slide 300000ms linear infinite;
     & .star {
+        z-index: 1;
         position: absolute;
         width: 2px;
         height: 2px;
@@ -183,15 +212,67 @@ button {
         padding: 20px;
         display: flex;
         flex-direction: column;
+        max-height: 75vh;
         
         &__message {
             margin-top: 10px;            
+        }
+
+        &__plaintext {
+            font-size: 14px;
+            padding-left: 5px;
         }
         
         button {
             margin-top: 10px;
             align-self: flex-end;
         }
+    }
+}
+
+#popup {
+    &-success {
+        transition: 1s all;
+        display: none;
+    }
+    &-failure {
+        transition: 1s all;
+        display: none;
+    }
+}
+
+.shake {
+    animation: tilt-shaking 0.15s infinite;
+}
+
+.loading {
+    &:after {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+        animation: ellipsis steps(4,end) 900ms infinite;
+        content: "\2026"; /* ascii code for the ellipsis character */
+        width: 0px;
+      }
+}
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes ellipsis {
+    to {
+      width: 1.25em;    
+    }
+}
+@-webkit-keyframes ellipsis {
+    to {
+      width: 1.25em;    
     }
 }
 
