@@ -275,6 +275,7 @@ button {
   box-shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
 }
 .feedback-header {
+  background-color: #F5F5DC;
   text-align: center;
   padding: 8px;
   font-size: 14px;

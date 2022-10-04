@@ -7,6 +7,8 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 #content-desktop {
@@ -25,7 +27,7 @@ body {
     display: block;
   }
 }
-#content {
+#wave-container {
   display: flex;
   padding: 0px 16px;
   justify-content: center;
@@ -34,12 +36,12 @@ body {
   flex-direction: column;
   transition: 0.5s;
 }
-
-#content p {
+#wave-container p {
   margin: 3px 16px;
 }
 
 .water {
+  z-index: 98;
   width: 40vw;
   height: 40vw;
   background-color: skyblue;
@@ -70,8 +72,9 @@ body {
   -webkit-animation: wave 5s linear infinite;
           animation: wave 5s linear infinite;
 }
-.water:active {
-  background-color: #8a0303;
+.water:hover {
+  -webkit-animation: color-pulse 3s infinite;
+          animation: color-pulse 3s infinite;
 }
 
 @-webkit-keyframes wave {
@@ -89,6 +92,28 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes color-pulse {
+  0% {
+    background-color: skyblue;
+  }
+  10% {
+    background-color: #3C5FC3;
+  }
+  100% {
+    background-color: skyblue;
+  }
+}
+@keyframes color-pulse {
+  0% {
+    background-color: skyblue;
+  }
+  10% {
+    background-color: #3C5FC3;
+  }
+  100% {
+    background-color: skyblue;
   }
 }
 .subtext {
@@ -209,7 +234,7 @@ body {
   flex-direction: row;
   align-items: center;
   text-overflow: clip;
-  background: linear-gradient(#8dc3a7 0%, transparent 100%);
+  background: linear-gradient(skyblue 0%, transparent 100%);
 }
 
 .navMenu {
@@ -254,7 +279,7 @@ body {
 .navMenu .dot {
   width: 6px;
   height: 6px;
-  background: #8dc3a7;
+  background: skyblue;
   border-radius: 50%;
   opacity: 0;
   transform: translateX(30px);

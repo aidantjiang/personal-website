@@ -20,7 +20,7 @@ let email = document.getElementById('contactmethod');
 let message = document.getElementById('message');
 
 let popupSuccess = document.getElementById('popup-success');
-let popupFailure = document.getElementById('popucp-failure');
+let popupFailure = document.getElementById('popup-failure');
 let submit = document.getElementById('submit');
 
 contactForm.addEventListener('submit', (e)=> {
