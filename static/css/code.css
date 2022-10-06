@@ -125,7 +125,7 @@ body::-webkit-scrollbar {
   width: 45vh;
   height: 60vh;
   margin: 40px;
-  background-image: radial-gradient(#8dc3a7, #dfeae2);
+  background-image: radial-gradient(#8D8EC3, #dfeae2);
   background-size: cover;
   transition: 0.3s all;
   cursor: pointer;
@@ -149,7 +149,7 @@ body::-webkit-scrollbar {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 5fr;
-  background: rgba(141, 195, 167, 0.9);
+  background: rgba(141, 142, 195, 0.9);
   color: #FEF5DF;
   opacity: 0;
   transition: all 0.5s;
