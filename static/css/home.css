@@ -1,14 +1,17 @@
 body {
   font-family: "Tiro Devanagari Sanskrit", serif;
   background-image: linear-gradient(#dfeae2, #8dc3a7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0;
   margin: 0;
   height: 100vh;
   overflow-y: hidden;
   overflow-x: hidden;
+}
+
+#content-desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #content-desktop {
@@ -27,12 +30,42 @@ body {
     display: block;
   }
 }
+.name {
+  font-size: 10em;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.name-position {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 101;
+}
+.name-container {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: grey;
+}
+.name-subtext {
+  font-size: 3em;
+}
+
+.mix {
+  mix-blend-mode: difference;
+}
+
 #wave-container {
   display: flex;
-  padding: 0px 16px;
+  padding: 20px 16px;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
   transition: 0.5s;
 }
@@ -116,13 +149,9 @@ body {
     background-color: skyblue;
   }
 }
-.subtext {
-  font-size: 1rem;
-}
-
 /* loader */
 .loader-wrapper {
-  z-index: 101;
+  z-index: 103;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -224,7 +253,7 @@ body {
 }
 /* end of loader */
 .navbar {
-  z-index: 100;
+  z-index: 102;
   position: fixed;
   top: 0;
   left: 0;
@@ -284,4 +313,49 @@ body {
   opacity: 0;
   transform: translateX(30px);
   transition: all 0.2s ease-in-out;
+}
+
+.social {
+  z-index: 102;
+  position: fixed;
+  top: 40px;
+}
+.social ul {
+  padding: 0px;
+  transform: translate(-270px, 0);
+}
+.social ul li {
+  display: block;
+  margin: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  width: 300px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 0 30px 30px 0;
+  transition: all 1s;
+}
+.social ul li:hover {
+  transform: translate(110px, 0);
+  background: rgba(135, 206, 235, 0.4);
+}
+.social ul li:hover a {
+  color: #000;
+}
+.social ul li:hover i {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.36);
+  transform: rotate(360deg);
+  transition: all 1s;
+}
+.social ul li i {
+  margin-left: 10px;
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  background: #ffffff;
+  transform: rotate(0deg);
 }/*# sourceMappingURL=home.css.map */
