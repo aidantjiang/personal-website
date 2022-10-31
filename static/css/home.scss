@@ -45,7 +45,7 @@ body {
     font-size: 3em;
   } 
 
-  font-size: 10em;
+  font-size: 8em;
   padding: 0;
   margin: 0;
   border: 0;
@@ -242,7 +242,7 @@ body {
   transform: translate(-50%, -50%);
 
   & a {
-    color: #f6f4e6;
+    color: grey;
     text-decoration: none;
     font-size: 1.2em;
     text-transform: lowercase;
@@ -292,7 +292,7 @@ body {
   & .dot {
     width: 6px;
     height: 6px;
-    background: skyblue;
+    background: red;
     border-radius: 50%;
     opacity: 0;
     -webkit-transform: translateX(30px);

@@ -1,18 +1,7 @@
 body {
-    font-family: 'Tiro Devanagari Sanskrit', serif;
-    height: 200vh;
-    background-image: linear-gradient(#dfeae2, #8dc3a7);
-  }
-
-#main {
-    border: 0;
-    display: flex;
-    transition: margin-left .5s;
-    padding: 16px;
-    justify-content: flex-start;
-    font-size: 3vh;
-    vertical-align: top;
-    flex-direction: column;
+  font-family: "Tiro Devanagari Sanskrit", serif;
+  height: 200vh;
+  background-image: linear-gradient(#dfeae2, #8dc3a7);
 }
 
 #content {
@@ -20,4 +9,4 @@ body {
   flex-wrap: wrap;
   padding: 0px 16px;
   margin-top: 10vh;
-}
+}/*# sourceMappingURL=photos.css.map */
