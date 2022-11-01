@@ -22,12 +22,28 @@ app.get('/', (req, res) => {
 
 app.get('/photos', (req, data) => {
     flickr.photosets.getPhotos({
-        api_key: process.env.FLICKR_API_KEY, 
-        photoset_id: "72177720303272931", 
+        api_key: process.env.FLICKR_API_KEY,
+        photoset_id: "72177720303272931",
         user_id: "195440118@N04"
     }).then( (res) => {
-        //send data up
-        data.json(res);
+        let linkArray = [];
+        const photoset = res.body.photoset;
+ 
+        for (let i = 0; i < photoset.photo.length; i++) {
+ 
+            //requirements for generating unique photo url
+            let server_id = photoset.photo[i].server;
+            let id = photoset.photo[i].id;
+            let secret = photoset.photo[i].secret;
+            //size of photo
+            let size = "w"
+ 
+            //generate link
+            let link = `https://live.staticflickr.com/${server_id}/${id}_${secret}_${size}.jpg`;
+            linkArray.push(link);
+        }
+        //send formatted data up
+        data.json(linkArray);
     }).catch( (err) => {
         console.error('bonk', err);
     });
