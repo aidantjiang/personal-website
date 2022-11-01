@@ -12,3 +12,16 @@ body {
     padding: 0px 16px;
     margin-top: 10vh;
 }
+
+.image {
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    &[data-status="inactive"] {
+        display: none;
+    }
+
+    &[data-status="active"] {
+        display: block;
+    }
+}

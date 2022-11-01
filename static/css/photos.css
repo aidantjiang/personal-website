@@ -11,4 +11,15 @@ body {
   flex-wrap: wrap;
   padding: 0px 16px;
   margin-top: 10vh;
+}
+
+.image {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.image[data-status=inactive] {
+  display: none;
+}
+.image[data-status=active] {
+  display: block;
 }/*# sourceMappingURL=photos.css.map */
