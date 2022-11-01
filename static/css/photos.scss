@@ -1,0 +1,14 @@
+body {
+    font-family: "Tiro Devanagari Sanskrit", serif;
+    height: 100vh;
+    background-image: linear-gradient(#dfeae2, #8dc3a7);
+    margin: 0px;
+    overflow: hidden;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 16px;
+    margin-top: 10vh;
+}
