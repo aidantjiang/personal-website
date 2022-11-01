@@ -20,8 +20,7 @@ xhr.onload = () => {
     //inserting elements
     console.log("starting image creation");
     var res = '';
-
-    console.log(data[1]);
+    
     for (let i = 0; i < data.length; i++) {
         res += `<img class="image" data-index="${i}" data-status="inactive" src="${data[i]}" />`;
     }
