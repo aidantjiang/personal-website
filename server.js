@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 app.get('/photos', (req, data) => {
     flickr.photosets.getPhotos({
         api_key: process.env.FLICKR_API_KEY,
-        photoset_id: "72177720303272931",
+        photoset_id: "72177720303338730",
         user_id: "195440118@N04"
     }).then( (res) => {
         let linkArray = [];
@@ -36,7 +36,7 @@ app.get('/photos', (req, data) => {
             let id = photoset.photo[i].id;
             let secret = photoset.photo[i].secret;
             //size of photo
-            let size = "w"
+            let size = "n"
  
             //generate link
             let link = `https://live.staticflickr.com/${server_id}/${id}_${secret}_${size}.jpg`;

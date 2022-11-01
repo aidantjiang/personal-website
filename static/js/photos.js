@@ -57,7 +57,7 @@ const distanceFromLast = (x, y) => {
 }
 
 window.onmousemove = (e) => {
-    if (distanceFromLast(e.clientX, e.clientY) > 100) {
+    if (distanceFromLast(e.clientX, e.clientY) > 150) {
         const lead = images[globalIndex % images.length],
               tail = images[(globalIndex - 5) % images.length];
 
