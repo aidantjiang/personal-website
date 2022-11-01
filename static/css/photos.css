@@ -1,7 +1,9 @@
 body {
   font-family: "Tiro Devanagari Sanskrit", serif;
-  height: 200vh;
+  height: 100vh;
   background-image: linear-gradient(#dfeae2, #8dc3a7);
+  margin: 0px;
+  overflow: hidden;
 }
 
 #content {

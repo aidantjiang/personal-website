@@ -9,12 +9,28 @@ const SERVICE = process.env.SERVICE;
 const EMAIL = process.env.EMAIL;
 const EMAIL_PASS = process.env.EMAIL_PASS;
 
+const Flickr = require("flickr-sdk")
+const flickr = new Flickr(process.env.FLICKR_API_KEY);
+
 //Middleware
 app.use(express.static('static'));
 app.use(express.json());
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/static/html/home.html');
+})
+
+app.get('/photos', (req, data) => {
+    flickr.photosets.getPhotos({
+        api_key: process.env.FLICKR_API_KEY, 
+        photoset_id: "72177720303272931", 
+        user_id: "195440118@N04"
+    }).then( (res) => {
+        //send data up
+        data.json(res);
+    }).catch( (err) => {
+        console.error('bonk', err);
+    });
 })
 
 app.post('/', (req, res) => {
