@@ -1,3 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+}
+
 body {
   font-family: "Tiro Devanagari Sanskrit", serif;
   height: 100vh;
@@ -16,7 +25,7 @@ body {
 }
 
 #back-page {
-  display: flex;
+  z-index: 100;
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -24,6 +33,12 @@ body {
   margin: 0;
   border: 0;
   padding: 0;
+}
+#back-page[data-status=inactive] {
+  display: none;
+}
+#back-page[data-status=active] {
+  display: flex;
 }
 
 .image {
@@ -114,4 +129,67 @@ body {
   opacity: 0;
   transform: translateX(30px);
   transition: all 0.2s ease-in-out;
+}
+
+#transition {
+  z-index: 150;
+}
+
+.buttons {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  z-index: -1;
+}
+.buttons button {
+  border: none;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buttons button:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+.buttons #bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.bottom-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  background: #48466d;
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.bottom-layer.active {
+  top: -100%;
+}
+.bottom-layer--2 {
+  background: #ecf3a3;
+  transition-delay: 0.12s;
+}
+.bottom-layer--3 {
+  background: #95a792;
+  transition-delay: 0.4s;
+}
+
+#front-page {
+  width: 100%;
+  height: 100%;
+  z-index: 125;
+  background-image: linear-gradient(174.2deg, rgb(255, 244, 228) 7.1%, rgb(240, 246, 238) 67.4%);
+}
+#front-page[data-status=inactive] {
+  display: none;
+}
+#front-page[data-status=active] {
+  display: block;
 }/*# sourceMappingURL=photos.css.map */

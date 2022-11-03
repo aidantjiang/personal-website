@@ -1,5 +1,14 @@
 $lightgrey: #545454;
-
+ 
+html {
+    box-sizing: border-box;
+}
+ 
+*, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+}
+ 
 body {
     font-family: "Tiro Devanagari Sanskrit", serif;
     height: 100vh;
@@ -7,7 +16,7 @@ body {
     margin: 0px;
     overflow: hidden;
 }
-
+ 
 #content {
     display: flex;
     flex-wrap: wrap;
@@ -16,42 +25,50 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
-
+ 
 #back-page {
-    display: flex;
+    z-index: 100;
     align-items: center;
     justify-content: center;
-
+ 
     height: 100%;
     width: 100%;
-
+ 
     margin: 0;
     border: 0;
     padding: 0;
+ 
+    &[data-status="inactive"] {
+        display: none;
+    }
+ 
+    &[data-status="active"] {
+        display: flex;
+    }
 }
-
+ 
 .image {
     z-index: 101;
     position: absolute;
     transform: translate(-50%, -50%);
-
+ 
     &[data-status="inactive"] {
         display: none;
     }
-
+ 
     &[data-status="active"] {
         display: block;
     }
 }
-
+ 
 .mix {
     mix-blend-mode: difference;
 }
-
+ 
 .text {
     &-center {
         z-index: 100;
-
+ 
         // height: 100%;
         // width: 100%;
         display: flex;
@@ -59,14 +76,14 @@ body {
         justify-content: center;
         flex-direction: column;
         text-align: center;
-
+ 
         color: grey;
         font-size: 3em;
     }
 }
-
+ 
 //start of navbar
-
+ 
 .navbar {
     z-index: 200;
     position: fixed;
@@ -74,23 +91,23 @@ body {
     left: 0;
     width: 100vw;
     height: 70px;
-  
+ 
     display: flex;
     flex-direction: row;
     align-items: center;
     text-overflow: clip;
-  
-  
+ 
+ 
     background: linear-gradient(skyblue 0%, transparent 70%, transparent 100%);
 }
-  
+ 
 .navMenu {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-
+ 
     & a {
         color: $lightgrey;
         text-decoration: none;
@@ -101,11 +118,11 @@ body {
         width: 100px;
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
-
+ 
     & :hover {
         color: #fddb3a;
     }
-
+ 
     &:nth-child(1):hover ~ .dot {
         -webkit-transform: translateX(25px);
         transform: translateX(25px);
@@ -113,7 +130,7 @@ body {
         transition: all 0.2s ease-in-out;
         opacity: 1;
     }
-
+ 
     &:nth-child(2):hover ~ .dot {
         -webkit-transform: translateX(120px);
         transform: translateX(120px);
@@ -121,7 +138,7 @@ body {
         transition: all 0.2s ease-in-out;
         opacity: 1;
     }
-
+ 
     &:nth-child(3):hover ~ .dot {
         -webkit-transform: translateX(240px);
         transform: translateX(240px);
@@ -129,16 +146,16 @@ body {
         transition: all 0.2s ease-in-out;
         opacity: 1;
     }
-
+ 
     &:nth-child(4):hover ~ .dot {
         -webkit-transform: translateX(340px);
         transform: translateX(340px);
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
         opacity: 1;
-    } 
+    }
 }
-
+ 
 & .dot {
     width: 6px;
     height: 6px;
@@ -150,4 +167,74 @@ body {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
+}
+ 
+//Mehmet Burak Erman's effect
+//https://codepen.io/mburakerman/pen/roJmaZ
+ 
+#transition {
+    z-index: 150;
+}
+ 
+.buttons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    z-index: -1;
+    button {
+        border: none;
+        background: rgba(0,0,0,0.02);
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+            background: rgba(0,0,0,0.04);
+        }
+    }
+    #bottom {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+}
+ 
+.bottom-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    bottom: auto;
+    right: auto;
+    background: #48466d;
+    transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+    &.active {
+        top: -100%;
+    }
+    &--2 {
+        background: #ecf3a3;
+        transition-delay: 0.12s;
+    }
+    &--3 {
+        background: #95a792;
+        transition-delay: 0.4s;
+    }
+}
+ 
+#front-page {
+    width: 100%;
+    height: 100%;
+ 
+    z-index: 125;
+ 
+    background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+ 
+    &[data-status="inactive"] {
+        display: none;
+    }
+ 
+    &[data-status="active"] {
+        display: block;
+    }
 }
