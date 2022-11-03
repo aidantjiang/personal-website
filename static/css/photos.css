@@ -181,6 +181,13 @@ body {
   transition-delay: 0.4s;
 }
 
+img[data-status=inactive] {
+  display: none;
+}
+img[data-status=active] {
+  display: absolute;
+}
+
 #front-page {
   width: 100%;
   height: 100%;

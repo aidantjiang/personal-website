@@ -40,6 +40,8 @@ const images = document.getElementsByClassName("image");
 const backPage = document.getElementById("back-page");
 const buttons = document.getElementsByTagName("button");
 const frontPage = document.getElementById("front-page");
+const upArrow = document.getElementById("up-arrow");
+const downArrow = document.getElementById("down-arrow");
  
 /*-----------------------------------------------------------------------------------------------------------------
 #front-page
@@ -69,6 +71,8 @@ for (const button of buttons) {
     window.setTimeout(() => {
         frontPage.dataset.status = flag ? "active" : "inactive";
         backPage.dataset.status = flag ? "inactive" : "active";
+        upArrow.dataset.status = flag ? "active" : "inactive";
+        downArrow.dataset.status = flag ? "inactive" : "active";
         resetImages();
     }, 400)
    
