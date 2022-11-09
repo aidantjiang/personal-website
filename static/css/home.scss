@@ -311,6 +311,10 @@ body {
   position: fixed;
   top: 40px;
 
+  a {
+    text-decoration: none;
+  }
+  
   & ul {
     padding: 0px;
     transform: translate(-270px, 0);
@@ -331,6 +335,10 @@ body {
 
         & a {
           color: #000;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
         & i {
           color: #fff;

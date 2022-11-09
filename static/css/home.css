@@ -320,6 +320,9 @@ body {
   position: fixed;
   top: 40px;
 }
+.social a {
+  text-decoration: none;
+}
 .social ul {
   padding: 0px;
   transform: translate(-270px, 0);
@@ -340,6 +343,9 @@ body {
 }
 .social ul li:hover a {
   color: #000;
+}
+.social ul li:hover a:hover {
+  text-decoration: underline;
 }
 .social ul li:hover i {
   color: #fff;
