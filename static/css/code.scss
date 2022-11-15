@@ -8,7 +8,7 @@ html {
   
 body {
     font-family: 'Tiro Devanagari Sanskrit', serif;
-    background-image: linear-gradient(#dfeae2, $lightgreen);
+    background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
     overflow-x: hidden;
     &::-webkit-scrollbar {
         display: none;
@@ -65,6 +65,11 @@ body {
 .sub-highlight {
     color: #658354;
 }
+
+#skills {
+    background-color: #f6f4e6;
+    box-shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+}
   
 #about-me {
     height: 100vh;
@@ -116,123 +121,8 @@ body {
 //end about me
 
 //card start
-  
-#projects {
-    display: flex;
-    flex-direction: column;
-}
-  
-.project-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
 
-.card-container {
-    width: 45vh;
-    height: 60vh;
-    margin: 40px;
-    
-    background-image: radial-gradient(#8D8EC3, #dfeae2);;
-    background-size: cover;
-    transition: 0.3s all;
-    cursor: pointer;
-    &:not(:hover) {
-        filter: blur(2px);
-    }
-    &:hover {
-        width: 55vh;
-        height: 65vh;
-        box-shadow: 0px 0px 40px 1px $offwhite;
-        transform: translatey(-10px);
-        & img {
-            opacity: 0;
-        }
-    }
-}
-  
-.overlay {
-    width: 100%;
-    height: 100%;
-    
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr;
-    
-    background: rgba(141, 142, 195, .9);
-    color: $offwhite;
-    opacity: 0;
-    transition: all 0.5s;
-}
-  
-  
-.items {
-    font-size: 25px;
-    padding-left: 20px;
-    letter-spacing: 3px;
-}
-  
-.head {
-    line-height: 20px;
-    
-    transform: translateY(40px);
-    transition: all 0.7s;
-    hr {
-        display: block;
-        width: 0;
 
-        border: none;
-        border-bottom: solid 2px $offwhite;
-        
-        position: absolute;
-        bottom: 0; left: 20px;
-        
-        transition: all .5s;
-    }
-}
-  
-.body {
-    transform: translateX(20px);
-    transition: all 0.7s;
-    ul {
-        font-size: 40;
-    }
-}
-
-.logo {
-    position: absolute;
-    transition: all 0.7s;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    
-    & img {
-        height: 200px;
-        width: 200px;
-    }
-}
-
-.card-container:hover .overlay {
-    opacity: 1;
-    & .head {
-        transform: translateY(0px);
-    }
-    
-    & hr {
-        width: 75px;
-        transition-delay: 0.4s;
-    }
-    
-    & .body {
-        transform: translateY(0px);
-        transition-delay: 0.3s;
-        opacity: 1;
-    }
-}
 
 //end of card
 
@@ -342,7 +232,7 @@ body {
     text-overflow: clip;
   
   
-    background: linear-gradient(#8dc3a7 0%, transparent 100%);
+    background: linear-gradient(skyblue 0%, transparent 70%, transparent 100%);
 }
   
 .navMenu {
@@ -354,7 +244,7 @@ body {
     transform: translate(-50%, -50%);
   
     & a {
-      color: #f6f4e6;
+      color: $darkgreen;
       text-decoration: none;
       font-size: 1.2em;
       text-transform: lowercase;
@@ -415,3 +305,24 @@ body {
 }
 
 //end of navbar
+
+.mix {
+    mix-blend-mode: difference;
+}
+
+//projects
+
+.logo {
+    width: 10em;
+    height: 10em;
+
+    &-container {
+        margin: 2em 0em;
+    }
+}
+
+#projects {
+    padding: 1em 0.1em;
+    background-color: rgba(207, 218, 198, 0.9);
+    box-shadow: -0.6rem -0.6rem 0 rgba(29, 30, 28, 0.26);
+}
