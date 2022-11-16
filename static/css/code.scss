@@ -318,6 +318,14 @@ body {
 
     &-container {
         margin: 2em 0em;
+
+        img {
+            box-shadow: 0rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+            background-color: #f6f4e6;
+            border-radius: 1em;
+
+            transition: 0.2s all;
+        }
     }
 }
 
