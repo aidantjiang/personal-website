@@ -102,18 +102,18 @@
           <div id="projects" class="grid-container">
             <div class="grid-element">
               <div class="logo-container">
-                <img id="logo-1"class="logo" src="../assets/mines.png">
+                <img id="logo-1" class="logo" src="../assets/mines.png">
               </div>
               <div class="logo-container">
-                <img id="logo-2"class="logo" src="../assets/cs50.png">
+                <img id="logo-2" class="logo" src="../assets/cs50.png">
               </div>
             </div>
             <div class="grid-element">
               <div class="logo-container">
-                <img id="logo-3"class="logo" src="../assets/upacreekrobo.png">
+                <img id="logo-3" class="logo" src="../assets/upacreekrobo.png">
               </div>
               <div class="logo-container">
-                <img id="logo-4"class="logo" src="../assets/blogo.png">
+                <img id="logo-4" class="logo" src="../assets/blogo.png">
               </div>
             </div>
             <div class="grid-element">
@@ -131,25 +131,17 @@
         <p class="footer"> // the future depends on what you do today   -gandhi</p>
       </div>
 
+      <div id="info-wrapper">
+        <div id="info-header"></div>
+        <div id="info-body"></div>
+        <div id="info-close"></div>
+      </div>
+
       <!-- LOADER ANIMATION, KEEP ON BOTTOM OF PAGE! -->
       <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
       </div>
       <div class="clock-loader"></div>
-
-      <script> 
-        $(".loader-wrapper").ready(() => {
-          console.log("starting");
-          $(".loader-wrapper").delay(Math.floor(Math.random() * 1500) + 1000).fadeOut(800, () => {
-            $(".loader").removeClass("loader");
-            $(".loader-inner").removeClass("loader-inner");
-            $(".lock-scroll").removeClass("lock-scroll");
-            console.log("done removing classes");
-            $(".box-background").addClass("box-transition");
-          });
-        })
-      </script>
-      
 
     </div>
   </body>

@@ -59,7 +59,23 @@
           virtual gallery (move mouse)
         </div>
       </div>
- 
+
+      <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
+
+      <script> 
+        $(".loader-wrapper").ready(() => {
+          console.log("starting");
+          $(".loader-wrapper").delay(Math.floor(Math.random() * 1500) + 1000).fadeOut(800, () => {
+            $(".loader").removeClass("loader");
+            $(".loader-inner").removeClass("loader-inner");
+            $(".lock-scroll").removeClass("lock-scroll");
+            console.log("done removing classes");
+            $(".box-background").addClass("box-transition");
+          });
+        })
+      </script>
  
     </div>
     <script src="../js/photos.js"></script>

@@ -308,7 +308,47 @@ body::-webkit-scrollbar {
 }
 
 #projects {
+  display: flex;
   padding: 1em 0.1em;
   background-color: rgba(207, 218, 198, 0.9);
   box-shadow: -0.6rem -0.6rem 0 rgba(29, 30, 28, 0.26);
+}
+
+#info {
+  z-index: 1000;
+}
+#info-wrapper {
+  background-color: #f6f4e6;
+  position: fixed;
+  top: 0;
+  left: -50%;
+  height: calc(100vh - 160px);
+  width: 100vh;
+  margin: 80px 0px;
+  transition: 0.5s all;
+}
+#info-close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+#info-close:hover {
+  opacity: 1;
+}
+#info-close:before, #info-close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+#info-close:before {
+  transform: rotate(45deg);
+}
+#info-close:after {
+  transform: rotate(-45deg);
 }/*# sourceMappingURL=code.css.map */

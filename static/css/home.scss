@@ -242,7 +242,7 @@ body {
   transform: translate(-50%, -50%);
 
   & a {
-    color: grey;
+    color: #f6f4e6;
     text-decoration: none;
     font-size: 1.2em;
     text-transform: lowercase;
@@ -292,7 +292,7 @@ body {
   & .dot {
     width: 6px;
     height: 6px;
-    background: red;
+    background: #8dc3a7;
     border-radius: 50%;
     opacity: 0;
     -webkit-transform: translateX(30px);
