@@ -338,25 +338,31 @@ body {
 
 #info {
     z-index: 1000;
+    &-text {
+        padding: 2em;
+        margin: 0;
+        border: 0;
+    }
+
     &-wrapper {
         background-color: #f6f4e6;
         position: fixed;
         top: 0;
-        left: -50%;
-        height: calc(100vh - 160px);
-        width: 100vh;
+        left: -80%;
+        height: calc(100vh - 10em);
+        width: 150vh;
         
-        margin: 80px 0px;
+        margin: 5em 0px;
 
         transition: 0.5s all;
     }
 
     &-close {
         position: absolute;
-        right: 32px;
-        top: 32px;
-        width: 32px;
-        height: 32px;
+        right: 2em;
+        top: 2em;
+        width: 2em;
+        height: 2em;
         opacity: 0.3;
 
         &:hover {
@@ -365,10 +371,10 @@ body {
         
         &:before, &:after {
             position: absolute;
-            left: 15px;
+            left: 0.9375em;
             content: ' ';
-            height: 33px;
-            width: 2px;
+            height: 2em;
+            width: 0.125em;
             background-color: #333;
         }
         &:before {
@@ -377,5 +383,56 @@ body {
         &:after {
             transform: rotate(-45deg);
         }
+    }
+
+    &-header {
+        padding: 0;
+        margin: 0;
+        border: 0;
+
+        text-align: center;
+        font-size: 2.75em;
+        font-weight: 700; color:#202020;
+        text-transform: uppercase;
+        word-spacing: 1px; letter-spacing:2px;
+    }
+
+    &-body {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        border: 0;
+
+        margin-top: 2.5em;
+        text-transform: none;
+        font-size:1.2em;
+        font-weight: normal;
+        font-style: italic; font-family: "Playfair Display","Bookman",serif;
+        color:#666; letter-spacing:-0.005em; word-spacing:1px;
+        letter-spacing:none;
+
+        &:before {
+            position: absolute;
+            left: 0;
+            bottom: 2.5em;
+            width: 3.75em;
+            height: 4px;
+            content: "";
+            left: 50%;
+            margin-left: -1.875em;
+            background-color: #dfdfdf;
+        }
+    }
+
+    &-link {
+        padding: 0;
+        margin: 0;
+        border: 0;
+
+        text-align: center;
+        font-size: 2.75em;
+        font-weight: 700; color:#202020;
+        text-transform: uppercase;
+        word-spacing: 1px; letter-spacing:2px;
     }
 }
