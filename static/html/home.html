@@ -14,54 +14,49 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body>
-    <div id="content-desktop">
-      <div class="navbar">
-        <nav class="navMenu">
-          <a href="../html/home.html">Home</a>
-          <a href="../html/code.html">Code</a>
-          <a href="../html/photos.html">Photos</a>
-          <a href="../html/contact.html">Contact me</a>
-          <div class="dot"></div>
-        </nav>
-      </div>
-      <div class="name-position mix">
-        <div class="name-container">
-          <p class="name">\\AIDAN T JIANG</p>
-          <p class="name-subtext">student, photographer, athlete, developer</p>
-        </div>
-      </div>
-      <div id="wave-container">
-        <div class="water"></div>
-          <p></p>
-        </div>
-      </div>
-
-      <nav class="social" id="social">
-        <ul>
-          <li><a href="https://github.com/aidantjiang" target="_blank">// github <i class="fa fa-github link"></i></a></li>
-          <li><a href="https://www.flickr.com/people/195440118@N04/" target="_blank">// flickr <i class="fa fa-flickr link"></i></a></li>
-          <li><a href="https://www.instagram.com/aidantjiangphoto/" target="_blank">// insta <i class="fa fa-instagram link"></i></a></li>
-        </ul>
+    <div class="navbar">
+      <nav class="navMenu">
+        <a href="../html/home.html">Home</a>
+        <a href="../html/code.html">Code</a>
+        <a href="../html/photos.html">Photos</a>
+        <a href="../html/contact.html">Contact me</a>
+        <div class="dot"></div>
       </nav>
-
-      <!-- LOADER ANIMATION, KEEP ON BOTTOM OF PAGE! -->
-      <div class="loader-wrapper">
-          <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <div class="name-position mix">
+      <div class="name-container">
+        <p class="name">\\AIDAN T JIANG</p>
+        <p class="name-subtext">student, photographer, athlete, developer</p>
       </div>
-      <script> 
-        $(".loader-wrapper").ready(() => {
-          console.log("starting");
-          $(".loader-wrapper").delay(Math.floor(Math.random() * 1500) + 1000).fadeOut(800, () => {
-            $(".loader").removeClass("loader");
-            $(".loader-inner").removeClass("loader-inner");
-            console.log("done");
-          });
-        })
-      </script>
     </div>
-    <div id="content-mobile">
-      <div class="water">hi</div>
+    <div id="wave-container">
+      <div class="water"></div>
+        <p></p>
+      </div>
     </div>
+
+    <nav class="social" id="social">
+      <ul>
+        <li><a href="https://github.com/aidantjiang" target="_blank">// github <i class="fa fa-github link"></i></a></li>
+        <li><a href="https://www.flickr.com/people/195440118@N04/" target="_blank">// flickr <i class="fa fa-flickr link"></i></a></li>
+        <li><a href="https://www.instagram.com/aidantjiangphoto/" target="_blank">// insta <i class="fa fa-instagram link"></i></a></li>
+      </ul>
+    </nav>
+
+    <!-- LOADER ANIMATION, KEEP ON BOTTOM OF PAGE! -->
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <script> 
+      $(".loader-wrapper").ready(() => {
+        console.log("starting");
+        $(".loader-wrapper").delay(Math.floor(Math.random() * 1500) + 1000).fadeOut(800, () => {
+          $(".loader").removeClass("loader");
+          $(".loader-inner").removeClass("loader-inner");
+          console.log("done");
+        });
+      })
+    </script>
     
     <script src="../js/home.js"></script>
   </body>

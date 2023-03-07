@@ -435,3 +435,10 @@ body::-webkit-scrollbar {
   margin-left: -1.875em;
   background-color: #dfdfdf;
 }/*# sourceMappingURL=code.css.map */
+
+.nav2 {
+  position: relative;
+  top: 0;
+  right: 0;
+  
+}

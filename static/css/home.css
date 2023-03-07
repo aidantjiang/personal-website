@@ -8,28 +8,6 @@ body {
   overflow-x: hidden;
 }
 
-#content-desktop {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#content-desktop {
-  display: block;
-}
-
-#content-mobile {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  #content-desktop {
-    display: none;
-  }
-  #content-mobile {
-    display: block;
-  }
-}
 .name {
   font-size: 8em;
   padding: 0;
